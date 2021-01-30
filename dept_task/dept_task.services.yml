@@ -1,0 +1,5 @@
+services:
+  dept_task.event_subscriber:
+    class: Drupal\dept_task\EventSubscriber\DeptTaskSubscriber
+    tags:
+      - {name: event_subscriber}

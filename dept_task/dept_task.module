@@ -1,0 +1,12 @@
+<?php
+
+use Drupal\Component\Utility\Random;
+
+function dept_task_user_presave(Drupal\Core\Entity\EntityInterface $user) {
+	
+	$token = Random::name(32);
+	$user->set('field_auth_token',$token);
+	
+}
+
+?>

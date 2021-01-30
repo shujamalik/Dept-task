@@ -1,0 +1,5 @@
+name: Dept task
+description: Dept task for creation of authtoken on register and login with it.
+core_version_requirement: ^8.8
+package: Custom
+type: module

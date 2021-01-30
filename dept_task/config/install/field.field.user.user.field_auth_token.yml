@@ -1,0 +1,22 @@
+uuid: 5fd98137-e5a0-4012-8793-0db67a62c8dd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_auth_token
+  module:
+    - user
+_core:
+  default_config_hash: IdWPKnW3PteT6xbRl91eUZ2AJkE7TqnusEg60EbHQNI
+id: user.user.field_auth_token
+field_name: field_auth_token
+entity_type: user
+bundle: user
+label: 'AUTH TOKEN'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

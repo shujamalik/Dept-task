@@ -1,0 +1,24 @@
+<?php
+
+use Drupal\Component\Utility\Random;
+use Drupal\user\Entity\User;
+/**
+ * Implements hook_install().
+ *
+ * Perform actions to set up the site for this profile.
+ *
+ * @see system_install()
+ */
+function dept_task_install() {
+	
+	$query = \Drupal::database()->select('users', 'u');
+	$query->fields('u',['uid']);
+	$query->condition('u.uid', 0 ,'!=');
+	$uids = $query->execute()->fetchAll();
+	foreach($uids as $uid){
+		$user = User::load($uid->uid); 
+		$user->save();
+	}
+	
+}
+?>

@@ -12,7 +12,7 @@ use Symfony\Component\HttpFoundation\RedirectResponse;
 class DeptTaskSubscriber implements EventSubscriberInterface {
 
   public function loginwithauthtoken(GetResponseEvent $event) {
-	  
+	
 	global $base_url;
     $current_user = \Drupal::currentUser();
 	$roles = $current_user->getRoles();
